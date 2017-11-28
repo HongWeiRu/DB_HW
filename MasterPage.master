@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">土地移轉手續查詢系統</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <% if (!this.IsAdminPage)
+                       {  %>
+                    <li><a href="Login.aspx" target="_blank">管理介面</a></li>
+                    <%}
+                       else
+                       {  %>
+                    <li><a href="Organization.aspx" >查詢機關資料</a></li>
+                    <li><a href="AreaData.aspx">管理土地資料</a></li>
+                    <li><a href="Default2.aspx" >行政區土地統計表</a></li>
+                    <%} %>
+                </ul>
+            </div>
+        </nav>
+        <form id="form1" runat="server">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </form>
+    </div>
+</body>
+</html>
