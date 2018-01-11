@@ -10,8 +10,13 @@ using System.Web;
 /// </summary>
 public class WebApp
 {
-    private const string connStr = @"Data Source=ORCL; User Id=GROUP7;Password=number0707;";
+    //private const string connStr = @"Data Source=ORCL; User Id=GROUP7;Password=number0707;";
+    private const string connStr = "user id=GROUP7;password=number0707;data source=" +
+     "(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)" +
+     "(HOST=140.117.69.58)(PORT=1521))(CONNECT_DATA=" +
+     "(SID=ORCL)))";
 
+    //private const string connStr = @"Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=100.100.100.100)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=myservice.com)));User Id=scott;Password=tiger;";
     public WebApp()
     {
 
