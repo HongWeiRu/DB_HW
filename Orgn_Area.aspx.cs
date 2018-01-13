@@ -11,9 +11,9 @@ public partial class Orgn_Area : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            this.ddlArea.DataSource = WebApp.GetDatas("SELECT 行政區名,ID FROM 行政區");
+            this.ddlArea.DataSource = WebApp.GetDatas("SELECT 行政區名,ID FROM 行政區 ORDER by ID");
             this.ddlArea.DataBind();
-            this.ddlOrgn.DataSource = WebApp.GetDatas("SELECT * FROM 機關資料");
+            this.ddlOrgn.DataSource = WebApp.GetDatas("SELECT * FROM 機關資料 Order By ID");
             this.ddlOrgn.DataBind();
         }
     }

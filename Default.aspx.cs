@@ -12,7 +12,7 @@ public partial class _Default : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            this.ddlArea.DataSource = WebApp.GetDatas("SELECT 行政區名,ID FROM 行政區");
+            this.ddlArea.DataSource = WebApp.GetDatas("SELECT 行政區名,ID FROM 行政區 Order by ID");
             this.ddlArea.DataBind();
         }
     }
@@ -49,7 +49,7 @@ public partial class _Default : System.Web.UI.Page
     /// <Author>Wei-Ru.Hong</Author>
     protected void ddlArea_SelectedIndexChanged(object sender, EventArgs e)
     {
-        this.ddlLot.DataSource = WebApp.GetDatas("SELECT distinct 地段名稱, 地段號 FROM AREADATA WHERE ID= " + this.ddlArea.SelectedValue);
+        this.ddlLot.DataSource = WebApp.GetDatas("SELECT distinct 地段名稱, 地段號 FROM AREADATA WHERE ID= " + this.ddlArea.SelectedValue + " Order by 地段號");
         this.ddlLot.DataBind();
     }
 
@@ -60,7 +60,7 @@ public partial class _Default : System.Web.UI.Page
     /// <Author>Wei-Ru.Hong</Author>
     protected void ddlLot_SelectedIndexChanged(object sender, EventArgs e)
     {
-        this.ddlAreaNumb.DataSource = WebApp.GetDatas("SELECT 地號 FROM AREADATA WHERE 地段號= " + this.ddlLot.SelectedValue);
+        this.ddlAreaNumb.DataSource = WebApp.GetDatas("SELECT 地號 FROM AREADATA WHERE 地段號= " + this.ddlLot.SelectedValue + " Order by 地號");
         this.ddlAreaNumb.DataBind();
     }
 }
