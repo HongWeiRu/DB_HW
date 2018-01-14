@@ -30,6 +30,9 @@
                     <li><a href="Organization.aspx" >查詢機關資料</a></li>
                     <li><a href="AreaData.aspx">管理土地資料</a></li>
                     <li><a href="Default2.aspx" >行政區土地統計表</a></li>
+                     <li><a href="Table1.aspx" >106年度公告地價較105年度調幅比例表</a></li>
+                     <li><a href="Table2.aspx" >106年度公告地價較105年度調幅明細表</a></li>
+                     <li><a href="Table3.aspx" >管理機關轄區土地統計數量表</a></li>
                     <%} %>
                 </ul>
             </div>

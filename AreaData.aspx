@@ -30,11 +30,11 @@
                     <asp:DetailsView ID="DetailsView1" runat="server" CssClass="table" AutoGenerateEditButton="True" Visible="false" OnModeChanging="DetailsView1_ModeChanging"
                         AutoGenerateRows="False" OnItemInserting="DetailsView1_ItemInserting" OnItemUpdating="DetailsView1_ItemUpdating">
                         <Fields>
-                            <asp:BoundField DataField="地號" HeaderText="地號" />
+                             <asp:BoundField DataField="行政區" HeaderText="行政區" Visible="false" />
+                             <asp:BoundField DataField="地段名稱" HeaderText="地段名稱"  />
                             <asp:BoundField DataField="地段號" HeaderText="地段號"  />
-                            <asp:BoundField DataField="地段名稱" HeaderText="地段名稱"  />
+                            <asp:BoundField DataField="地號" HeaderText="地號" />                       
                             <asp:BoundField DataField="所有者" HeaderText="所有者" />
-                            <asp:BoundField DataField="行政區" HeaderText="行政區" Visible="false" />
                         </Fields>
                     </asp:DetailsView>
 

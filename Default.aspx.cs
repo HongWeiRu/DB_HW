@@ -60,7 +60,7 @@ public partial class _Default : System.Web.UI.Page
     /// <Author>Wei-Ru.Hong</Author>
     protected void ddlLot_SelectedIndexChanged(object sender, EventArgs e)
     {
-        this.ddlAreaNumb.DataSource = WebApp.GetDatas("SELECT 地號 FROM AREADATA WHERE 地段號= " + this.ddlLot.SelectedValue + " Order by 地號");
+        this.ddlAreaNumb.DataSource = WebApp.GetDatas("SELECT 地號 FROM AREADATA WHERE 地段號= " + this.ddlLot.SelectedValue + "Order by 地號");
         this.ddlAreaNumb.DataBind();
     }
 }
