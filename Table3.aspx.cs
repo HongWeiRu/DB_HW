@@ -9,7 +9,7 @@ public partial class Table3 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string Sql = @"SELECT VEWTABLE3.* FROM VEWTABLE3";
+        string Sql = @"SELECT VEWTABLE3_1.* FROM VEWTABLE3_1";
         this.gvData.DataSource = WebApp.GetDatas(Sql);
         this.gvData.DataBind();
         ((MasterPage)this.Page.Master).IsAdminPage = true;

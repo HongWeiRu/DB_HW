@@ -7,8 +7,8 @@
         <Columns>
              <asp:BoundField DataField="類別" HeaderText="機關類別" />
             <asp:BoundField DataField="名稱" HeaderText="機關名稱" />
-            <asp:BoundField DataField="行政區名" HeaderText="管轄行政區" />
-            <asp:BoundField DataField="土地筆數" HeaderText="土地筆數" DataFormatString="{0:#,##0}" />
+            <asp:BoundField DataField="行政區數" HeaderText="管轄行政區數量" />
+            <asp:BoundField DataField="土地筆數" HeaderText="負責土地筆數" DataFormatString="{0:#,##0}" />
         </Columns>
     </asp:GridView>
 </asp:Content>
